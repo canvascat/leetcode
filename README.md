@@ -1,0 +1,3 @@
+# Typescript Leetcode
+
+leetcode note 🎯
