@@ -1,16 +1,18 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
-import camelCase from 'lodash.camelcase'
+import { camelCase } from 'lodash'
 import typescript from 'rollup-plugin-typescript2'
 import json from 'rollup-plugin-json'
+import alias from '@rollup/plugin-alias'
+import { join } from 'path'
 
-const pkg = require('./package.json')
+import pkg from './package.json'
 
 const libraryName = 'leetcode'
 
 export default {
-  input: `src/${libraryName}.ts`,
+  input: 'src/main.ts',
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd', sourcemap: true },
     { file: pkg.module, format: 'es', sourcemap: true },
@@ -34,5 +36,11 @@ export default {
 
     // Resolve source maps to the original source
     sourceMaps(),
+
+    alias({
+      entries: [
+        { find: 'src', replacement: join(__dirname, 'src') }
+      ]
+    })
   ],
 }

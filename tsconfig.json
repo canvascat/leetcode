@@ -14,9 +14,11 @@
     "outDir": "dist/lib",
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "src/*": [ "src/*" ]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "src/leetcode/__test__"]
 }
