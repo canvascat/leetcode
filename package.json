@@ -2,11 +2,15 @@
   "name": "leetcode",
   "version": "0.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "leetcode",
+    "typescript",
+    "algorithm"
+  ],
   "author": "canvascat <canvascat@qq.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/canvascat/leetcode.git"
   },
   "license": "MIT",
   "engines": {
