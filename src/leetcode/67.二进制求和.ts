@@ -14,7 +14,7 @@ export function addBinary(a: string, b: string): string {
     j = n >> 1;
     sum = `${n % 2}${sum}`;
   }
-  if (j) sum = `1${sum}`
+  if (j) sum = `1${sum}`;
   return sum;
 }
 // @lc code=end

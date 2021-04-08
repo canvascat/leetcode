@@ -11,7 +11,7 @@ export
     // 去除重复数字
     while (left < right && nums[left] === nums[left + 1]) left++;
     while (left < right && nums[right] === nums[right - 1]) right--;
-    const mid = left + (right - left) >> 1, mn = nums[mid];
+    const mid = (right + left) >> 1, mn = nums[mid];
     if (mn === target) return true;
     if (mn >= nums[left]) { // 左边有序
       if (target < mn && target >= nums[left]) {
