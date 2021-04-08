@@ -1,4 +1,4 @@
-#root = true
+root = true
 
 [*]
 indent_style = space
@@ -8,6 +8,13 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 100
 indent_size = 2
+spaces_around_operators = true
+
+[*.{js,jsx,ts,tsx}]
+quote_type = single
+
+[*.{html,less,css,json}]
+quote_type = double
 
 [*.md]
 trim_trailing_whitespace = false
