@@ -15,4 +15,9 @@ module.exports = {
     'node_modules/**',
     'dist/**'
   ],
-}
+  rules: {
+    '@typescript-eslint/no-explicit-any': 0,
+    "semi": [2, "always"],
+    "indent": ['error', 2],
+  }
+};
